@@ -22,9 +22,9 @@
 #
 # Created:     29/01/2020
 # -------------------------------------------------------------------------------
-
 import sys,os
 from datetime import datetime
+from gecosistema_win_service import *
 
 class WatchDogSvc(WindowsService):
 
