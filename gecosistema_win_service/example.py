@@ -22,7 +22,7 @@
 #
 # Created:     29/01/2020
 # -------------------------------------------------------------------------------
-import sys,os
+import os,sys
 from datetime import datetime
 from gecosistema_win_service import *
 
@@ -48,7 +48,6 @@ class WatchDogSvc(WindowsService):
             filename = "D:/WatchDogSvc.log"
             with open(filename, "w") as stream:
                 stream.write(now.strftime("running @ %H:%M:%S..."))
-
 
     Run = staticmethod(run)
 

@@ -26,7 +26,7 @@ import win32serviceutil
 import win32service
 import win32event
 import servicemanager
-import sys,datetime
+import os,sys,datetime
 
 
 def now():
