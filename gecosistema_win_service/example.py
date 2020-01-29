@@ -26,6 +26,16 @@ import sys,os
 from datetime import datetime
 from gecosistema_win_service import *
 
+### Install service
+##python example.py stop
+##python example.py --startup=auto install
+##python example.py start
+
+
+### Remove service
+##python example.py stop
+##python example.py remove
+
 class WatchDogSvc(WindowsService):
 
     _svc_name_         = "WatchDogSvc"

@@ -79,7 +79,7 @@ class WindowsService(win32serviceutil.ServiceFramework):
         win32event.SetEvent(self.hWaitStop)
 
     def SvcDoRun(self):
-        self.log("Service - STARTED!\n")
+        servicemanager.LogInfoMsg("%s - STARTED!"%self._svc_name_)  #For Event Log
         self.timeout =0
         self.SvcSetStartDate()
         self._svc_next_execution = self._svc_start_date
