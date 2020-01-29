@@ -57,7 +57,7 @@ class WatchDogSvc(WindowsService):
 if __name__ == '__main__':
 
 
-    DEBUG = len(sys.args)<=1
+    DEBUG = len(sys.argv)<=1
 
     if not DEBUG:
         WatchDogSvc.install()
