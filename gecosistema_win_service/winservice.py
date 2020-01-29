@@ -53,6 +53,7 @@ class WindowsService(win32serviceutil.ServiceFramework):
     _svc_interval_       = 30000  #30 seconds
     _svc_working_dir     = justpath(__file__)
     _svc_next_execution  = now()
+    _svc_description_    = "This is a General Python Windows Service"
 
     @classmethod
     def install(self):
@@ -79,6 +80,8 @@ class WindowsService(win32serviceutil.ServiceFramework):
         win32event.SetEvent(self.hWaitStop)
 
     def SvcDoRun(self):
+        self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
+
         self.timeout =0
         self.SvcSetStartDate()
         self._svc_next_execution = self._svc_start_date

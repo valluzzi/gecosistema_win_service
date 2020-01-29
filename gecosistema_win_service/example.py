@@ -40,6 +40,7 @@ class WatchDogSvc(WindowsService):
 
     _svc_name_         = "WatchDogSvc"
     _svc_display_name_ = _svc_name_
+    _svc_description_  = "This is an Example Python Windows Service"
 
     #Override this method
     def run(self):
