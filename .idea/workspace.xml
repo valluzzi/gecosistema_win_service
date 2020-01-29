@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeacfff9-0ae6-4387-a4ca-61630aee2970" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gecosistema_win_service/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/gecosistema_win_service/example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="82" column="68" selection-start-line="82" selection-start-column="68" selection-end-line="82" selection-end-column="68" />
+            <state relative-caret-position="340">
+              <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
               <folding>
                 <element signature="e#1000#1023#0" expanded="true" />
               </folding>
@@ -276,8 +275,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="82" column="68" selection-start-line="82" selection-start-column="68" selection-end-line="82" selection-end-column="68" />
+        <state relative-caret-position="340">
+          <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
           <folding>
             <element signature="e#1000#1023#0" expanded="true" />
           </folding>

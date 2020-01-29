@@ -25,7 +25,6 @@
 import win32serviceutil
 import win32service
 import win32event
-import servicemanager
 import os,sys,datetime
 
 
@@ -78,6 +77,7 @@ class WindowsService(win32serviceutil.ServiceFramework):
     def SvcStop(self):
         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
         win32event.SetEvent(self.hWaitStop)
+        self.ReportServiceStatus(win32service.SERVICE_STOPPED)
 
     def SvcDoRun(self):
         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
@@ -97,11 +97,13 @@ class WindowsService(win32serviceutil.ServiceFramework):
         while True:
             try:
                 # Wait for service stop signal, if I timeout, loop again
+                self.ReportServiceStatus(win32service.SERVICE_RUNNING)
                 rc = win32event.WaitForSingleObject(self.hWaitStop, self.timeout)
                 # Check to see if self.hWaitStop happened
                 if rc == win32event.WAIT_OBJECT_0:
                     # Stop signal encountered
-                    servicemanager.LogInfoMsg("%s - STOPPED!"%self._svc_name_)  #For Event Log
+                    self.SvcStop()
+
                     break
                 else:
                     #Time to execute
