@@ -70,5 +70,11 @@ if __name__ == '__main__':
                 stream.write("python %s stop\n"%(filepy))
                 stream.write("python %s --startup=auto install\n"%(filepy))
                 stream.write("python %s start\n"%(filepy))
+        filebat = "remove.bat"
+        if not os.path.isfile(filebat):
+            with open(filebat, "w") as stream:
+                stream.write("@echo off\n")
+                stream.write("python %s stop\n" % (filepy))
+                stream.write("python %s remove\n" % (filepy))
         WatchDogSvc.Run(False)
 
