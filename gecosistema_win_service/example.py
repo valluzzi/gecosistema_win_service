@@ -57,11 +57,12 @@ class WatchDogSvc(WindowsService):
 if __name__ == '__main__':
 
 
-    DEBUG = (__file__!="")
+    DEBUG = (os.path.basename(__file__)!="")
 
     if not DEBUG:
         WatchDogSvc.install()
     else:
+        print(__file__)
         filepy = os.path.basename(__file__)
         filebat = "install.bat"
         if not os.path.isfile(filebat):
