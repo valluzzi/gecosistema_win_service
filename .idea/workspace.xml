@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeacfff9-0ae6-4387-a4ca-61630aee2970" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" afterDir="false" />
-    </list>
+    <list default="true" id="aeacfff9-0ae6-4387-a4ca-61630aee2970" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+            <state relative-caret-position="170">
+              <caret line="111" column="32" lean-forward="true" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
               <folding>
                 <element signature="e#1000#1023#0" expanded="true" />
               </folding>
@@ -107,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="582" />
     <option name="y" value="-1015" />
     <option name="width" value="1936" />
@@ -199,7 +197,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-545" y="-1088" width="2576" height="1096" extended-state="6" />
+    <frame x="-545" y="-1088" width="2576" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.08426073" />
@@ -275,8 +273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+        <state relative-caret-position="170">
+          <caret line="111" column="32" lean-forward="true" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
           <folding>
             <element signature="e#1000#1023#0" expanded="true" />
           </folding>
