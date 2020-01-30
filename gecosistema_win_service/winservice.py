@@ -27,6 +27,9 @@ import win32service
 import win32event
 import os,sys,datetime
 
+# pip install pywin32
+# copy Python37\Lib\site-packages\pywin32_system32\pywintypes37.dll Python37\Lib\site-packages\win32
+
 
 def now():
     return datetime.datetime.now()
@@ -61,6 +64,16 @@ class WindowsService(win32serviceutil.ServiceFramework):
     def log(self,text):
         print(text)
 
+    def SvcSetStartDate(self):
+        self._svc_interval_ = 10 * 1000  # 10s
+        self._svc_start_date = yesterday()
+
+    def setTimerTo(self, date):
+        delta = (date - now()).total_seconds() * 1000
+        while self.timeout < delta:
+            self.timeout += 500
+        # self.log("Next execution in %s s"%(self.timeout/1000))
+
     def __init__(self,args):
         win32serviceutil.ServiceFramework.__init__(self,args)
         self.hWaitStop = win32event.CreateEvent(None,0,0,None)
@@ -73,21 +86,42 @@ class WindowsService(win32serviceutil.ServiceFramework):
     def SvcDoRun(self):
         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
 
-        try:
-            # Wait for service stop signal, if I timeout, loop again
-            self.ReportServiceStatus(win32service.SERVICE_RUNNING)
-            rc = win32event.WaitForSingleObject(self.hWaitStop, self.timeout)
-            # Check to see if self.hWaitStop happened
-            if rc == win32event.WAIT_OBJECT_0:
-                # Stop signal encountered
-                self.SvcStop()
+        self.timeout = 0
+        self.SvcSetStartDate()
+        self._svc_next_execution = self._svc_start_date
 
-            else:
-                #Time to execute
-                self.alarm()
+        # Calculate delta
+        delta = (self._svc_next_execution - now()).total_seconds() * 1000
+        while delta < 0:
+            self._svc_next_execution += datetime.timedelta(milliseconds=self._svc_interval_)
+            delta = (self._svc_next_execution - now()).total_seconds() * 1000
 
-        except Exception as ex:
-            self.SvcStop()
+        self.setTimerTo(self._svc_next_execution)
+
+        while True:
+            try:
+                # Wait for service stop signal, if I timeout, loop again
+                self.ReportServiceStatus(win32service.SERVICE_RUNNING)
+                rc = win32event.WaitForSingleObject(self.hWaitStop, self.timeout)
+                # Check to see if self.hWaitStop happened
+                if rc == win32event.WAIT_OBJECT_0:
+                    # Stop signal encountered
+                    self.SvcStop()
+                    break
+                else:
+                    # Time to execute
+                    delta = (self._svc_next_execution - now()).total_seconds() * 1000
+
+                    if delta > 0:
+                        self.setTimerTo(self._svc_next_execution)
+
+                    if delta < 0:
+                        self.alarm()
+                        self._svc_next_execution += datetime.timedelta(milliseconds=self._svc_interval_)
+                        self.timeout = 0
+
+            except Exception as ex:
+                pass
 
 
     def alarm(self):
