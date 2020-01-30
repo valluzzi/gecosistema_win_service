@@ -63,7 +63,7 @@ class WindowsService(win32serviceutil.ServiceFramework):
 
     def log(self,text):
         #print(text)
-        with open(_svc_working_dir+"/error.log","a") as stream:
+        with open(self._svc_working_dir+"/error.log","a") as stream:
             stream.write("<%s>\n"%(text))
 
     def SvcSetStartDate(self):
