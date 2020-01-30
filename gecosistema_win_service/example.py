@@ -23,7 +23,7 @@
 # Created:     29/01/2020
 # -------------------------------------------------------------------------------
 import os,sys
-from datetime import datetime
+import datetime
 from gecosistema_win_service import *
 
 ### Install service
@@ -45,9 +45,9 @@ class WatchDogSvc(WindowsService):
     #Override this method
     def run(self):
         if self:
-            now = datetime.now()
+            now = datetime.datetime.now()
             filename = "D:/WatchDogSvc.log"
-            with open(filename, "w") as stream:
+            with open(filename, "a") as stream:
                 stream.write(now.strftime("running @ %H:%M:%S..."))
 
     Run = staticmethod(run)

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeacfff9-0ae6-4387-a4ca-61630aee2970" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gecosistema_win_service/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/gecosistema_win_service/example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/gecosistema_win_service/winservice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="460">
+              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
               <folding>
                 <element signature="e#1000#1023#0" expanded="true" />
               </folding>
@@ -39,8 +40,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gecosistema_win_service/example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="50" column="67" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="50" selection-end-column="67" />
+            <state relative-caret-position="583">
+              <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+              <folding>
+                <element signature="e#929#942#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +78,9 @@
       <find>win32serviceutil</find>
       <find>win32api</find>
       <find>strtofile</find>
-      <find>now</find>
       <find>_svc_working_dir</find>
+      <find>.now</find>
+      <find>now</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,6 +237,17 @@
     <MESSAGE value="initial commit 29/01/2020" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit 29/01/2020" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gecosistema_win_service/example.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -252,15 +268,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gecosistema_win_service/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="50" column="67" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="50" selection-end-column="67" />
+        <state relative-caret-position="583">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="e#929#942#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gecosistema_win_service/winservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="460">
+          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
           <folding>
             <element signature="e#1000#1023#0" expanded="true" />
           </folding>
