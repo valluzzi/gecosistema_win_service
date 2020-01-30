@@ -73,7 +73,6 @@ class WindowsService(win32serviceutil.ServiceFramework):
     def SvcDoRun(self):
         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
 
- :
         try:
             # Wait for service stop signal, if I timeout, loop again
             self.ReportServiceStatus(win32service.SERVICE_RUNNING)
