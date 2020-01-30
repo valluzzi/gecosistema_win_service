@@ -23,6 +23,6 @@
 # Created:     29/01/2020
 # -------------------------------------------------------------------------------
 
-__version__ = '0.0.21'
+__version__ = '0.0.22'
 
-from winservice import *
+from .winservice import *
