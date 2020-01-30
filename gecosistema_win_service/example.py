@@ -26,6 +26,10 @@ import os,sys
 import datetime
 from gecosistema_win_service import *
 
+# Patch
+# pip install pywin32
+# copy Python37\Lib\site-packages\pywin32_system32\pywintypes37.dll Python37\Lib\site-packages\win32
+
 ### Install service
 ##python example.py stop
 ##python example.py --startup=auto install

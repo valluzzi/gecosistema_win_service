@@ -63,8 +63,8 @@ class WindowsService(win32serviceutil.ServiceFramework):
 
     def log(self,text):
         print(text)
-        with open("error.log","a") as stream:
-            stream.write("%s\n"%(text))
+        #with open("error.log","a") as stream:
+        #    stream.write("%s\n"%(text))
 
     def SvcSetStartDate(self):
         #self._svc_interval_ = 10 * 1000  # 10s
