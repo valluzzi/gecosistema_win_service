@@ -82,7 +82,6 @@ class WindowsService(win32serviceutil.ServiceFramework):
                 # Stop signal encountered
                 self.SvcStop()
 
-                break
             else:
                 #Time to execute
                 self.alarm()
