@@ -121,7 +121,8 @@ class WindowsService(win32serviceutil.ServiceFramework):
                         self.timeout = 0
 
             except Exception as ex:
-                pass
+                with open("d:/error.log", "w") as stream:
+                    stream.write("Exception:%s"%(ex))
 
 
     def alarm(self):
