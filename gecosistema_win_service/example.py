@@ -48,7 +48,7 @@ class WatchDogSvc(WindowsService):
             now = datetime.datetime.now()
             filename = "D:/WatchDogSvc.log"
             with open(filename, "a") as stream:
-                stream.write(now.strftime("running @ %H:%M:%S..."))
+                stream.write(now.strftime("running @ %H:%M:%S...\n"))
 
     Run = staticmethod(run)
 

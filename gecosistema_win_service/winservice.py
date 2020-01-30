@@ -63,9 +63,11 @@ class WindowsService(win32serviceutil.ServiceFramework):
 
     def log(self,text):
         print(text)
+        with open("error.log","a") as stream:
+            stream.write("%s\n"%(text))
 
     def SvcSetStartDate(self):
-        self._svc_interval_ = 10 * 1000  # 10s
+        #self._svc_interval_ = 10 * 1000  # 10s
         self._svc_start_date = yesterday()
 
     def setTimerTo(self, date):
@@ -121,8 +123,7 @@ class WindowsService(win32serviceutil.ServiceFramework):
                         self.timeout = 0
 
             except Exception as ex:
-                with open("d:/error.log", "a") as stream:
-                    stream.write("Exception:%s"%(ex))
+                self.log(ex)
 
 
     def alarm(self):
